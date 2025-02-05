@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: rgb(193, 172, 212);
+    padding: 16px 0;
+    color: aliceblue;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button{
+    margin-left: 16px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none; /*vai sumir com o formulario e ele vai ser ativado pela função do javascript*/
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+input,
+button{
+    padding: 8px;
+}
+
+button{
+    background-color: #009432;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul{
+    display: flex; /*elemento um ao lado do outro*/
+    flex-wrap: wrap; /*quando os elementos todos tomarem o tamanho da tela, criem uma nova linha*/
+}
+
+ul li{
+    max-width: 25%;
+    list-style: none; /*remove as bolinhas dos topicos*/
+    position: relative;
+    max-height: 280px; /*limita a altura das fotos*/
+    overflow-y: hidden; /*corta a imagem e deixa todas do mesmo tamanho*/
+}
+
+ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-imagem-link{
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+.overlay-imagem-link a{
+    color: white; /*aqui ele some com o link da imagem*/
+    text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link{
+    opacity: 1; /*aqui ele aparece com o link da imagem*/
+}
